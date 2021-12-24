@@ -1,0 +1,126 @@
+{
+  "loans": [
+    {
+      "id": 1,
+      "name": "Rishav Mukherje",
+      "address": "Salt Lake City",
+      "customerid": 10010,
+      "pan": "BBGMP2345",
+      "loantype": "Savings",
+      "loanamount": 100000,
+      "rate": 4,
+      "duration": 24
+    },
+    {
+      "id": 2,
+      "name": "Rajesh Kumar",
+      "address": "Vasant Vihar",
+      "customerid": 10020,
+      "pan": "BBGMO2345",
+      "loantype": "Home Loan",
+      "loanamount": 200000,
+      "rate": 6,
+      "duration": 23
+    },
+    {
+      "id": 4,
+      "name": "M.Sathish Kumar",
+      "address": "Mangalore",
+      "customerid": 10542345,
+      "pan": "BBGMPIU45",
+      "loantype": "Gold Loan",
+      "loanamount": 3000000,
+      "rate": 2,
+      "duration": 45
+    }
+  ],
+  "users": [
+    {
+      "fullname": "Rishav Mukherje",
+      "dob": "09-02-1999",
+      "address": "Salt Lake City",
+      "state": "West Bengal",
+      "country": "Indoa",
+      "accounttype": "Savings",
+      "pan": "BBGMP234",
+      "username": "rm",
+      "email": "rm@gmail.com",
+      "customerid": "1111",
+      "password": "passs",
+      "id": 1
+    },
+    {
+      "fullname": "ABC",
+      "dob": "2000-11-08",
+      "address": "Salt Lake City",
+      "state": "West Bengal",
+      "country": "India",
+      "accounttype": "Savings",
+      "pan": "BBGMP2312",
+      "username": "abc_user",
+      "email": "abc.user",
+      "customerid": 1211,
+      "password": "pass",
+      "id": 2
+    },
+    {
+      "fullname": "",
+      "dob": "",
+      "address": "",
+      "state": "",
+      "country": "",
+      "accounttype": "",
+      "pan": "",
+      "username": "",
+      "email": "",
+      "customerid": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "fullname": "rrrr",
+      "dob": "1999-02-09",
+      "address": "4556",
+      "state": "6666",
+      "country": "6666",
+      "accounttype": "6666",
+      "pan": "6666",
+      "username": "6666",
+      "email": "6666@gmail.com",
+      "customerid": 44444,
+      "password": "44556",
+      "id": 4
+    },
+    {
+      "fullname": "Utkarsh Sinha",
+      "dob": "1989-03-09",
+      "address": "Navi Mumbai",
+      "state": "Mumbai",
+      "country": "India",
+      "accounttype": "Mortgage",
+      "pan": "10010",
+      "username": "rrr",
+      "email": "avinash.s@gmail.com",
+      "customerid": 10010,
+      "password": "eee",
+      "id": 5
+    },
+    {
+      "fullname": "M",
+      "dob": "1999-02-09",
+      "address": "1232",
+      "state": "334",
+      "country": "ggg",
+      "accounttype": "gggg",
+      "pan": "ggggg",
+      "username": "gggg",
+      "email": "gggg@gmail.com",
+      "customerid": 1112222,
+      "password": "gggg",
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">WELCOME TO BANK MANAGEMENT PORTAL</span>
+        </div>
+      </nav>
+    
+<div class="signup-form">
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+		<h2>Registration</h2>
+		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Full Name</label>
+      <input formControlName="fullname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <span class="text-danger" *ngIf="signupForm.controls['fullname'].dirty && signupForm.hasError('required','fullname')">*Full Name is Required</span>
+      <p class="text-danger" *ngIf="fullnamelength()">Should be more than 5 characters</p>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Customer ID</label>
+        <input formControlName="customerid" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['customerid'].dirty && signupForm.hasError('required','customerid')">*This one is assigned by the bank</span>
+      </div>
+
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
+        <input formControlName="dob" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['dob'].dirty && signupForm.hasError('required','dob')">*Date of Birth is Required</span>
+        
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Address</label>
+        <input formControlName="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['address'].dirty && signupForm.hasError('required','address')">*Address is Required</span>
+      
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">State</label>
+        <input  formControlName="state" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['state'].dirty && signupForm.hasError('required','state')">*State is Required</span>
+       
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Country</label>
+        <input formControlName="country" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['country'].dirty && signupForm.hasError('required','country')">*Country is Required</span>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Account Type</label>
+        <input formControlName="accounttype" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['accounttype'].dirty && signupForm.hasError('required','accounttype')">*Account Type is Required</span>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">PAN CARD</label>
+        <input formControlName="pan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['pan'].dirty && signupForm.hasError('required','pan')">*PAN is Required</span>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Username is Required</span>
+        <p class="text-danger" *ngIf="usernamelength()">Should be more than 4 characters</p>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email ID</label>
+        <input formControlName="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Email is Required</span>
+        <p class="text-danger" *ngIf="emailcriteria()" >Email ID is not valid</p>
+      </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+      <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Password is Required</span>
+      <p class="text-danger" *ngIf="passwordcriteria()" >Should be 5 characters minimum and 1 special character</p>
+    </div>
+<br>
+<br>
+    <button type="submit" [disabled]="!signupForm.valid" class="btn btn-success">Sign Up</button>
+    </form>
+	<div class="text-center">Already have an account? <a href="/login">Sign in</a></div>
+</div>
+</body>
+</html>
