@@ -17,17 +17,9 @@ export class RegisterUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm=this.formBuilder.group({
-      fullname:['',Validators.required],
-      dob:['',Validators.required],
-      address:['',Validators.required],
-      state:['',Validators.required],
-      country:['',Validators.required],
-      accounttype:['',Validators.required],
-      pan:['',Validators.required],
-      username:['',Validators.required],
-      email:['',Validators.required,Validators.email],
       customerid:['',Validators.required],
-      password:['',Validators.required]
+      password:['',Validators.required],
+      repassword:['']
 
 
     })
@@ -51,16 +43,21 @@ export class RegisterUserComponent implements OnInit {
 
   signUp()
   {
-    if(this.signupForm.value.fullname.length<5 ||this.signupForm.value.password.length<5)
+    if(this.signupForm.value.password.length<5 )
     {
       alert('Some of the fields are entered wrong!!Check before inputting');
       this.router.navigate(['register']);
     }
+    else if(this.signupForm.value.password!=this.signupForm.value.repassword)
+    {
+      alert('Password Mis-match.Please re-enter the password carefully');
+      
+    }
     else
     {
-    this.http.post<any>("http://localhost:3000/users",this.signupForm.value)
+    this.http.post<any>("http://localhost:3000/applytoadmin",this.signupForm.value)
      .subscribe(res=>{
-       alert('Sign Up Successfull!!!')
+       alert('Sign Up was Successfull!! Our Admin Will Get Back To You')
        this.signupForm.reset();
       this.router.navigate(['success']);
      }, err=>

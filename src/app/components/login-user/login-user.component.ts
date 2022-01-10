@@ -30,12 +30,15 @@ export class LoginUserComponent implements OnInit {
       });
       if(user)
       {
-        alert('Login Successful');
+      
+        alert('Successfull Login');
         this.loginForm.reset();
         localStorage.setItem('token',"endsjnsnaindsnBubdiuqIUNDndnwneofn.shbdwibdqioudqwdnwqidhdiuhnwdnwodhqdhdidhhdwah9hdiqh");
-        this.loginForm.value.customerid==10010?localStorage.setItem('customeyJhbGCriooiyernsnu.ejertype','user'):localStorage.setItem('customertype','admin')
+        this.loginForm.value.customerid==10010?localStorage.setItem('customertype',"admin"):localStorage.setItem('customertype',"user");
         this.router.navigate(['home']);
         
+
+
       }
       else
       {

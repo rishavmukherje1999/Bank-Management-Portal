@@ -14,12 +14,7 @@ export class EditUserComponent implements OnInit {
   edituserdetails = new FormGroup({
     id: new FormControl(''),
     name: new FormControl(''),
-    address: new FormControl(''),
     customerid: new FormControl(''),
-    pan: new FormControl(''),
-    loantype: new FormControl(''),
-    loanamount:new FormControl(''),
-    rate: new FormControl(''),
     duration: new FormControl('')
 
 
@@ -32,15 +27,8 @@ export class EditUserComponent implements OnInit {
      this.edituserdetails = new FormGroup({
       id: new FormControl(result['id']),
       name: new FormControl(result['name']),
-      address: new FormControl(result['address']),
       customerid: new FormControl(result['customerid']),
-      pan: new FormControl(result['pan']),
-      loantype: new FormControl(result['loantype']),
-      loanamount:new FormControl(result['loanamount']),
-      rate: new FormControl(result['rate']),
       duration: new FormControl(result['duration'])
-  
-  
    });
      
    });

@@ -13,79 +13,19 @@
 <body>
     <nav class="navbar navbar-light bg-dark">
         <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">WELCOME TO BANK MANAGEMENT PORTAL</span>
+          <span class="navbar-brand mb-0 h1">WELCOME TO EMPLOYEE ISSUE TRACKER</span>
         </div>
       </nav>
     
 <div class="signup-form">
     <form [formGroup]="signupForm" (ngSubmit)="signUp()">
 		<h2>Registration</h2>
-		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Full Name</label>
-      <input formControlName="fullname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <span class="text-danger" *ngIf="signupForm.controls['fullname'].dirty && signupForm.hasError('required','fullname')">*Full Name is Required</span>
-      <p class="text-danger" *ngIf="fullnamelength()">Should be more than 5 characters</p>
-    </div>
+		<p class="hint-text">Enter your details!!Our Admin Will Contact You!!</p>
 
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Customer ID</label>
+        <label for="exampleInputEmail1" class="form-label">Employee ID</label>
         <input formControlName="customerid" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <span class="text-danger" *ngIf="signupForm.controls['customerid'].dirty && signupForm.hasError('required','customerid')">*This one is assigned by the bank</span>
-      </div>
-
-
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Date of Birth</label>
-        <input formControlName="dob" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['dob'].dirty && signupForm.hasError('required','dob')">*Date of Birth is Required</span>
-        
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Address</label>
-        <input formControlName="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['address'].dirty && signupForm.hasError('required','address')">*Address is Required</span>
-      
-    </div>
-
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">State</label>
-        <input  formControlName="state" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['state'].dirty && signupForm.hasError('required','state')">*State is Required</span>
-       
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Country</label>
-        <input formControlName="country" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['country'].dirty && signupForm.hasError('required','country')">*Country is Required</span>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Account Type</label>
-        <input formControlName="accounttype" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['accounttype'].dirty && signupForm.hasError('required','accounttype')">*Account Type is Required</span>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">PAN CARD</label>
-        <input formControlName="pan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['pan'].dirty && signupForm.hasError('required','pan')">*PAN is Required</span>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Username</label>
-        <input formControlName="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Username is Required</span>
-        <p class="text-danger" *ngIf="usernamelength()">Should be more than 4 characters</p>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email ID</label>
-        <input formControlName="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Email is Required</span>
-        <p class="text-danger" *ngIf="emailcriteria()" >Email ID is not valid</p>
       </div>
 
     <div class="mb-3">
@@ -93,6 +33,10 @@
       <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
       <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Password is Required</span>
       <p class="text-danger" *ngIf="passwordcriteria()" >Should be 5 characters minimum and 1 special character</p>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Re-Enter Your Password</label>
+      <input formControlName="repassword" type="password" class="form-control" id="exampleInputPassword1">
     </div>
 <br>
 <br>

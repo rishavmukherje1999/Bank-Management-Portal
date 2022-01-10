@@ -1,8 +1,11 @@
 <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
         <span class="navbar-text text-center">
-          Welcome to Bank Management Portal
+          Welcome to Employee Issue Tracker
         </span>
+        <ul class="nav-item">
+          <button (click)="logout()">Logout</button>
+        </ul>
       </div>
   </nav>
 
@@ -11,17 +14,37 @@
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Interest Rates</h5>
-              <p class="card-text">Check out to see the various lists of Interests we Offer</p>
-              <a  class="btn btn-primary">Know More</a>
+              <h5 class="card-title">Employee Time Tracker</h5>
+              <p class="card-text">Find out the Time for Each Issue</p>
+              <a  class="btn btn-primary" routerLink="/time">Track Time</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Loan</h5>
-              <p class="card-text">Apply for Loans here!!We provide the best service</p>
+              <h5 class="card-title">Employee Leave Tracker</h5>
+              <p class="card-text">Weekly Off Days For Team</p>
+              <a  class="btn btn-primary" >Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Employee Issue Tracker</h5>
+              <p class="card-text">Upcoming Issue Tracker and more issues recently registered</p>
+              <a  class="btn btn-primary" routerLink="/issue">Track Issue</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Administrator Recruit</h5>
+              <p class="card-text">Contact for being a part of Administrator team</p>
               <a  class="btn btn-primary">Know More</a>
             </div>
           </div>
@@ -31,8 +54,8 @@
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Savings Account</h5>
-              <p class="card-text">Open a savings bank account with us!!Check out various loan sections here</p>
+              <h5 class="card-title">Feedback Forms</h5>
+              <p class="card-text">Submit a feedback for any problem you are facing</p>
               <a  class="btn btn-primary">Know More</a>
             </div>
           </div>
@@ -40,28 +63,8 @@
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Senior Citizen Accounts</h5>
-              <p class="card-text">Retired?No worries!!We got you covered,we have a variety of accounts and your money is safe with us!!</p>
-              <a  class="btn btn-primary">Know More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Gold Loan</h5>
-              <p class="card-text">We offer loans against gold.Check out this section to see various loans available</p>
-              <a  class="btn btn-primary">Know More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Video KYC</h5>
-              <p class="card-text">Verify your documents with us!!Register to book a free call or click to know more!!</p>
+              <h5 class="card-title">Remove Team</h5>
+              <p class="card-text">Fill Your details for getting removed from the team</p>
               <a  class="btn btn-primary">Know More</a>
             </div>
           </div>
@@ -71,8 +74,8 @@
       <br>
       <div class="container">
          <div class="place">
-            <button class="btn btn-outline-success me-2 data-bs-toggle" type="button" routerLink="/list">Applied Loans</button>
-            <button class="btn btn-outline-success me-2 data-bs-toggle" type="button">Contact us</button>
+            <button class="btn btn-outline-success me-2 data-bs-toggle" type="button" routerLink="/list">Tracker Page</button>
+            <button class="btn btn-outline-success me-2 data-bs-toggle" type="button" routerLink="/adminlogin">Login As Administrator</button>
          </div>
        
       </div>

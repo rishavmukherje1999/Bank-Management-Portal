@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-light bg-primary">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">WELCOME TO BANK MANAGEMENT PORTAL</span>
+      <span class="navbar-brand mb-0 h1">WELCOME TO EMPLOYEE ISSUE TRACKER</span>
     </div>
   </nav>
   </nav>
@@ -16,11 +16,11 @@
             <div class="card">
                 <div class="text-center">
                     <h1>Login</h1>
-                    <h6>Please Enter email and password!!</h6>
+                    <h6>Please Enter Employee ID and password!!</h6>
                 </div>
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Customer ID</label>
+                          <label for="exampleInputEmail1" class="form-label">Employee ID</label>
                           <input  formControlName="customerid" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                           <span class="text-danger" *ngIf="loginForm.controls['customerid'].dirty && loginForm.hasError('required','customerid')">*This field is Required</span>
                         </div>
@@ -32,7 +32,7 @@
                         <br>
                         <button type="submit" [disabled]="!loginForm.valid"  class="btn btn-primary">Login</button>
                       </form>
-                <a style="color: aliceblue; margin-top: 10px;" routerLink="/register">New User?Click here to Register!!</a>
+                <a style="color: aliceblue; margin-top: 10px;" routerLink="/register">New Employee? Enter your details here</a>
             </div>
         </div>
     </div>

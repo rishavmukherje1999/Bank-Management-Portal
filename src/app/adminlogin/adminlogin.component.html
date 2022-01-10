@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-primary">
+
+    <nav class="navbar navbar-light bg-primary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Administrator Login</span>
+        </div>
+      </nav>
+      </nav>
+      
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-64">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>Enter your ID to continue</h6>
+                </div>
+                    <form [formGroup]="adminform" (ngSubmit)="enter()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Admin ID</label>
+                          <input  formControlName="adminid" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <br>
+                        <button type="submit" b  class="btn btn-primary">Login</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>

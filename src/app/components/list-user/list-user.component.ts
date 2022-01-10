@@ -24,6 +24,7 @@ export class ListUserComponent implements OnInit {
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('token');
+    localStorage.removeItem('customertype');
     this.routed.navigate(['login']);
 }
   deleteStudent(id:number)

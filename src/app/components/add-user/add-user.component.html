@@ -26,45 +26,13 @@
       <input type="text" formControlName= "name" class="form-control" id="exampleInputPassword1">
       <span class="text-danger" *ngIf="adduserdetails.controls['name'].dirty && adduserdetails.hasError('required','name')">*Name Required</span>
     </div>
-    
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Address</label>
-        <input type="text" formControlName= "address" class="form-control" id="exampleInputPassword1">
-        <span class="text-danger" *ngIf="adduserdetails.controls['address'].dirty && adduserdetails.hasError('required','address')">*Address Required</span>
-      </div>
 
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Customer ID</label>
         <input type="number" formControlName= "customerid" class="form-control" id="exampleInputPassword1">
         <span class="text-danger" *ngIf="adduserdetails.controls['customerid'].dirty && adduserdetails.hasError('required','customerid')">*Customer ID Required</span>
       </div>
-
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">PAN Card</label>
-        <input type="text" formControlName= "pan" class="form-control" id="exampleInputPassword1">
-        <span class="text-danger" *ngIf="adduserdetails.controls['pan'].dirty && adduserdetails.hasError('required','pan')">*PAN Card Required</span>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Loan Type</label>
-        <input type="text" formControlName= "loantype" class="form-control" id="exampleInputPassword1">
-        <span class="text-danger" *ngIf="adduserdetails.controls['loantype'].dirty && adduserdetails.hasError('required','loantype')">*Loan Type Required</span>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Loan Amount</label>
-        <input type="number" formControlName= "loanamount" class="form-control" id="exampleInputPassword1">
-        <span class="text-danger" *ngIf="adduserdetails.controls['loanamount'].dirty && adduserdetails.hasError('required','loanamount')">*Loan Amount Required</span>
-      </div>
-
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Rate of Interest</label>
-        <input type="number" formControlName= "rate" class="form-control" id="exampleInputPassword1">
-        <span class="text-danger" *ngIf="adduserdetails.controls['rate'].dirty && adduserdetails.hasError('required','rate')">*Rate of Interest Required</span>
-        <a routerLink="/home">See the available list of rates!!</a>
-      </div>
-
-      <div class="mb-3">
+     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Duration(In Months)</label>
         <input type="number"  formControlName= "duration"class="form-control" id="exampleInputPassword1">
         <span class="text-danger" *ngIf="adduserdetails.controls['duration'].dirty && adduserdetails.hasError('required','duration')">*Time Required in Months</span>

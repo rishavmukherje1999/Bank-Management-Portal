@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand">Loan Section</a>
+    <a class="navbar-brand">Time Tracker Section</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,7 +10,7 @@
           <a class="nav-link active data-bs-toggle" aria-current="page" routerLink="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active data-bs-toggle" href="/add">Apply Loan</a>
+          <a class="nav-link active data-bs-toggle" href="/add">Apply Time</a>
         </li>
         <li class="nav-item">
          <button (click)="logout()">Logout</button>
@@ -25,13 +25,8 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Address</th>
-        <th scope="col">Customer ID</th>
-        <th scope="col">Pan Card</th>
-        <th scope="col">Loan Type</th>
-        <th scope="col">Loan Amount</th>
-        <th scope="col">Rate of Interest</th>
-        <th scope="col">Duration(In Months)</th>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Working Hours</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -39,12 +34,7 @@
         <tr *ngFor="let item of userdata">
             <th scope="row">{{item.id}}</th>
            <td>{{item.name}}</td>
-           <td>{{item.address}}</td>
            <td>{{item.customerid}}</td>
-           <td>{{item.pan}}</td>
-           <td>{{item.loantype}}</td>
-           <td>{{item.loanamount}}</td>
-           <td>{{item.rate}}</td>
            <td>{{item.duration}}</td>
            <td>
              <i  (click)="deleteStudent(item.id)" class="fa fa-trash"></i>&nbsp;&nbsp;
